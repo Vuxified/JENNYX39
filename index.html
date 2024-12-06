@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Power of X39</title>
   <style>
-    /* Background video styling */
+    /* General Styling */
     body {
       margin: 0;
       padding: 0;
@@ -20,12 +20,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1;
+      z-index: -1; /* Ensure the video stays behind all content */
     }
 
     /* Navbar styling */
     .navbar {
       background: rgba(0, 0, 0, 0.8);
+      z-index: 2; /* Ensure navbar appears above background */
+      position: relative;
     }
 
     .navbar-brand {
@@ -66,6 +68,8 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       transform: translateY(20px) scale(0.95);
       animation: slideFadeIn 1.2s ease-out forwards;
+      z-index: 2; /* Ensure it appears above the background */
+      position: relative;
     }
 
     .content-section h1 {
@@ -77,6 +81,8 @@
     /* Slider container */
     .slider-container {
       padding: 50px 20px;
+      z-index: 2; /* Ensure sliders appear above the background */
+      position: relative;
     }
 
     /* Video and image slider styling */
@@ -108,6 +114,57 @@
       height: 50px;
       width: 50px;
       background-size: 20px !important;
+    }
+
+    /* Button styling */
+    .button-wrapper {
+      text-align: left; /* Align buttons to the left */
+      margin-top: 30px; /* Space above the buttons */
+      margin-left: 95px; /* Adjust position to the left */
+      position: relative;
+      z-index: 3; /* Ensure buttons appear above everything else */
+      display: flex;
+      gap: 50px; /* Space between buttons */
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 22px 40px; /* Slightly larger size */
+      font-size: 22px; /* Slightly larger font */
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+      font-weight: bold;
+      border: 2px solid; /* Ensure the border is solid and visible */
+    }
+
+    /* Buy Now Button */
+    .btn-buy {
+      color: white !important;
+      background-color: #0055ff !important; /* Solid blue background */
+      border-color: #0055ff !important; /* Solid blue border */
+    }
+
+    .btn-buy:hover {
+      background-color: white !important; /* Turn white on hover */
+      color: #0055ff !important; /* Change text color to blue on hover */
+      border-color: #0055ff !important; /* Ensure the border remains solid */
+      transform: scale(1.05); /* Slight zoom effect */
+    }
+
+    /* Learn More Button */
+    .btn-learn {
+      color: #0055ff !important;
+      background-color: white !important; /* Solid white background */
+      border-color: #0055ff !important; /* Solid blue border */
+    }
+
+    .btn-learn:hover {
+      background-color: #0055ff !important; /* Turn blue on hover */
+      color: white !important; /* Change text color to white on hover */
+      border-color: #0055ff !important; /* Ensure the border remains solid */
+      transform: scale(1.05); /* Slight zoom effect */
     }
   </style>
   <!-- Bootstrap CSS -->
@@ -191,6 +248,11 @@
           </button>
         </div>
       </div>
+    </div>
+    <!-- Buttons -->
+    <div class="button-wrapper">
+      <a href="https://lifewave.com/2762415" class="btn btn-buy">Buy Now</a>
+      <a href="https://thisisitinfo.com/" class="btn btn-learn">Learn More</a>
     </div>
   </div>
 
